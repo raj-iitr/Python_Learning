@@ -1,2 +1,2 @@
-from temp1 import *
+from temp1 import name, place
 
