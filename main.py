@@ -1,2 +1,3 @@
-from temp1 import name, place
+from temp1 import name,place
+print(name)
 
