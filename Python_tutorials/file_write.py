@@ -44,11 +44,45 @@ txt_data = {
    "city": "Kings Landing"
 }
 
-file_path = "temp1.py"
+file_path = "temp1.json"
 
 try:
   with open(file_path, "w") as file:
     json.dump(txt_data,file, indent=4)
+    print(f"Data written to {file_path}")
+except FileExistsError:
+  print(f"{file_path} already exists. Data not written.")
+
+
+##########################################################
+# .csv file
+
+
+import csv
+
+txt_data = [
+  ["Name", "Age", "Job"],
+  ["Tyrion Lennister", 30, "Hand of the Queen"],
+  ["Daenerys Targaryen", 20, "Mother of Dragons"],
+  ["Jon Snow", 25, "King in the North"],
+  ["Arya Stark", 18, "No One"],
+  ["Sansa Stark", 17, "Lady of Winterfell"],
+  ["Jaime Lennister", 35, "Kingsguard"],
+  ["Cersei Lennister", 35, "Queen of the Seven Kingdoms"],
+  ["Joffrey Baratheon", 18, "King of the Seven Kingdoms"],
+  ["Sandor Clegane", 35, "The Hound"],
+  ["Theon Greyjoy", 25, "Reek"],
+  ["Bran Stark", 15, "Three-Eyed Raven"],
+
+]
+
+file_path = "temp1.csv"
+
+try:
+  with open(file_path, "w", newline="") as file:
+    writer = csv.writer(file)
+    for row in txt_data:
+      writer.writerow(row)
     print(f"Data written to {file_path}")
 except FileExistsError:
   print(f"{file_path} already exists. Data not written.")
