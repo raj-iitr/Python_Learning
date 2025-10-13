@@ -1,0 +1,65 @@
+API are mechanisms that allows two different components of software that is backend and frontend to interact with each other using a defined set of rules, protocols and data formats.
+
+Analogy => Kitchen is Backend, User is Frontend, Waiter is API, food menu is set of rules or protocols.
+
+Before the existance of APIs, there was Monolithic Architecture where both frontend and backend were in same dierctory. Frontend used to directly communicate with backend.
+
+But there was a problem with monolithic architecture, as the data inside database can not be shared to any other; it is limited to frontend only.
+
+But API gives access to use backend via some fetch functions of the app with certain protocols thus allowing everyone to use database and fetch the data.
+
+API always return data in json formats which is acceptable by all the programming languages.
+
+With a single backend and a single database which is accesible by an API, one can make Web frontend, ios frontend, android frontend using single backend.
+
+In field of AI/ML, we will replace database by ML mode which is connected through backend. From frontend we could
+connect to backend via API and then finally can use AL/Ml models for apps.
+
+What is FastAPI?
+FastAPI is a modern, high-performance, web framework for building APIs with python.
+It is build-up on two very important python libraries - 1) Starlette
+2) Pydantic
+
+Starlette manages how your API receives requests and send back responses.
+
+Pydantic is used to check if the data coming into your API is correct and in the correct format
+
+Philosphy of FastAPI-
+1) Fast to run
+2) Fast to code
+
+Why FastAPI fast to run??--------------------------------------------------------
+
+There are 2 components of any API-
+1)API code = To implement overall business logic
+2)Web Server = To process upcoming HTTPs request coming from the client
+
+Web Server--------->Server Gateway Interface (SGI)-------->API Code
+
+Https request goes to SGI, SGI convert Https request to python understandable format and passes to API code generate response and then send it back to the web server and then to client.
+
+Flask is also a framework to write APIs.
+
+Web Server--------->Server Gateway Interface (SGI)-------->API Code
+Gunicorn----------->WSGI->Werkzeug------------------------>Sync Endpoint (Flask)
+uvicorn------------>ASGI->Pydantic------------------------>Async Endpoint (FastAPI)
+
+WSGI = Web Server Gateway Interface = Works synchronously
+ASGI = Asynchronous Server Gateway Interface = Works asynchronously
+
+Werkzeug and Pydantic are the libraries used to implement WSGI and ASGI respectively.
+
+Uvicorn is high performance server than Gunicorn and perform tasks asynchronously.
+
+
+
+Why FastAPI fast to code?--------------------------------------------------
+
+1) Automatic data validation
+2) Auto-generated interractive documentation
+3) Seamless integration with Modern Ecosystem (ML/DL libraries, OAuth, etc.)
+
+
+
+
+

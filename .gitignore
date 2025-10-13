@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+Python_tutorials/FastAPI_tuts/__pycache__
 *.py[cod]
 *$py.class
 
