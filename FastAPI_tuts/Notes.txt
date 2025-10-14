@@ -28,7 +28,7 @@ Philosphy of FastAPI-
 1) Fast to run
 2) Fast to code
 
-Why FastAPI fast to run??--------------------------------------------------------
+Why FastAPI fast to run??----------------------------------------------------------------------------------------------
 
 There are 2 components of any API-
 1)API code = To implement overall business logic
@@ -53,13 +53,103 @@ Uvicorn is high performance server than Gunicorn and perform tasks asynchronousl
 
 
 
-Why FastAPI fast to code?--------------------------------------------------
+Why FastAPI fast to code?------------------------------------------------------------------------------------------------
 
 1) Automatic data validation
 2) Auto-generated interractive documentation
 3) Seamless integration with Modern Ecosystem (ML/DL libraries, OAuth, etc.)
 
+Client-Server Architecture-----------------------------------------------------------------------------------------------
 
+Client = A client is a computer, device or programme that requests service or resources from other computer. Eg. Browser
+Server = A server is acomputer or software (set of instructions that tell computer what to do) that provides service or resources to client over a network. Eg. Apahche, Nginx
+
+
+# User Side
+Browser (Chrome/Firefox/Edge)
+---------------------------------
+| Sends request to a website     |
+| Receives HTML, CSS, JS, JSON  |
+---------------------------------
+
+          |
+          v
+
+# Web Server (Software running on a Server Computer)
+Web Server (Apache, Nginx, LiteSpeed)
+---------------------------------
+| Receives HTTP requests         |
+| Serves static content directly |
+| For dynamic requests, forwards |
+|   to Application Server        |
+---------------------------------
+
+          |
+          v
+
+# Application Server (Runs Backend Code)
+Application Server (Uvicorn, Gunicorn, Node.js, Tomcat)
+---------------------------------
+| Executes backend logic         |
+| Processes requests             |
+| Connects to database           |
+| Returns response (JSON/HTML)  |
+---------------------------------
+
+          |
+          v
+
+# Backend / API
+Backend Code (Python, Node.js, Java, PHP, etc.)
+---------------------------------
+| Handles business logic          |
+| Defines API endpoints (/login, /products, /users) |
+| Reads/writes data to Database   |
+---------------------------------
+
+          |
+          v
+
+# Database Server (Another type of server)
+Database Server (MySQL, PostgreSQL, MongoDB)
+---------------------------------
+| Stores and manages data         |
+| Responds to queries from Backend|
+---------------------------------
+
+          ^
+          |
+# Response goes back the same way:
+Backend → Application Server → Web Server → Browser
+
+# Optional Hosting Platforms
+Cloud Platforms (AWS, Render, Vercel)
+---------------------------------
+| Provide servers (physical/virtual) to host your web server & backend |
+| Handle uptime, security, scalability                                   |
+---------------------------------
+
+
+HTTPS Methods--------------------------------------------------------------------------------------------------
+
+Software can be of two types - 
+1) Static (Calneder)
+2) Dynamic (Word, Excel etc.)
+
+Type of interactions you can do with a software -
+C = Create
+R = Read
+U = Update
+D = Delete
+
+Websites are special softwares that are installed on some external computers (Servers) but can be used by anyone (clients) via HTTPS.
+
+Websites are also of two type = Static and Dynamic
+
+GET = To fetch something
+POST = To add something
+PUT = To update something
+DELETE = To delete something
 
 
 
