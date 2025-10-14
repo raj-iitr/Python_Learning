@@ -64,7 +64,13 @@ address1 = Address(**address_dict)
 patient_dict = {"name": "Ananya", "age": 89, "address": address1, "mail": "ananya@gmail.com", "dic": ["a", "b", "c"], "linkedin":"https://linkedin.com/in/ananya", "weight": 90, "height": 1.65, "length": 1.65}
 patient1 = Patient(**patient_dict)
 
-print(patient1)
+# Serialisation :- Some in-build methods are there to convert the model into a dictionary or a json string
+temp = patient1.model_dump()
+# temp = patient1.model_dump(exclude={"age"})
+# temp = patient1.model_dump(exclude_unset=True)) # It will exclude the fields which are not set
+# temp = patient1.model_dump_json()
+print(temp)
+print(type(temp))
 
 
 
@@ -75,11 +81,16 @@ def insert_patient_data(patient: Patient):
   print(patient.address.pin)
   print("Inserted patient data")
 
-# patient_info = {"name": "Ananya", "age": 89}
-
-# patient1 = Patient(**patient_info)
-
 insert_patient_data(patient1)
 
 
-# n
+
+
+# Nested Models :- 
+# You can use nested models to define the structure of a model. For example, you can define a model for address and use it in the patient model.
+
+# Benefits :-
+# 1) Reusability
+# 2) Better organiization of data
+# 3) Reaability
+# 4) Validatation
