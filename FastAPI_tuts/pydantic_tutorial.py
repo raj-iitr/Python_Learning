@@ -1,12 +1,14 @@
-from pydantic import BaseModel, EmailStr, AnyUrl, Field, Optional
+from pydantic import BaseModel, EmailStr, AnyUrl, Field
+from typing import Optional, List, Dict,
 
 class Patient(BaseModel):
   name: str
   age : int
   mail = EmailStr                           #  (Email validation)
-  dic : list[str]                     #  (Multi layer validation)
-  allergies : Optional[int] #  (Optional field)
+  dic : List[str]                     #  (Multi layer validation)
+  allergies : Optional[int]            #  (Optional field)
   linkedin : AnyUrl                         #  (URL validation)
+  weight = Field(gt)
 
 
 
