@@ -72,6 +72,7 @@ print(patient1)
 def insert_patient_data(patient: Patient):
   print(patient.name)
   print(patient.age)
+  print(patient.address.pin)
   print("Inserted patient data")
 
 # patient_info = {"name": "Ananya", "age": 89}
@@ -80,3 +81,5 @@ def insert_patient_data(patient: Patient):
 
 insert_patient_data(patient1)
 
+
+# n
