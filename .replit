@@ -33,12 +33,12 @@ args = "Run Python"
 name = "Run Python"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "FastAPI_tuts/pydantic.py"
-
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python FastAPI_tuts/pydantic.py"
 
 [[ports]]
 localPort = 8000
