@@ -196,3 +196,15 @@ It allows u to
 3) Add metadata
 
 default, title, description, example, min_length, ge, le, regex etc.
+
+
+Why we need Pydantic?-------------------------------------------------------------------------------------------------
+1) For data validation
+2) For type validation
+
+Without Pydantic we need to handle the above 2 problem via manual coding which is not scalable at all.
+
+How does Pydantic works?-----------------------------------------------------------------------------------------------
+1) Define a pydantic model that represents ideal schema of the data
+2) Instantaniate the model with raw input data
+3) Pass the validated model object to the functions or use it throughout the database

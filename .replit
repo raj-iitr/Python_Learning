@@ -1,4 +1,4 @@
-entrypoint = "Python_tutorials/FastAPI_tuts/main.py"
+entrypoint = "FastAPI_tuts/pydantic.py"
 modules = ["python-3.11"]
 
 [nix]
@@ -11,7 +11,7 @@ language = "python3"
 requiredFiles = [".replit", "replit.nix"]
 
 [deployment]
-run = ["python3", "Python_tutorials/FastAPI_tuts/main.py"]
+run = ["python3", "FastAPI_tuts/pydantic.py"]
 deploymentTarget = "cloudrun"
 
 [agent]
@@ -35,7 +35,12 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python Python_tutorials/FastAPI_tuts/main.py"
+args = "FastAPI_tuts/pydantic.py"
 
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
+exposeLocalhost = true
