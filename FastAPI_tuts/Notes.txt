@@ -151,5 +151,4 @@ POST = To add something
 PUT = To update something
 DELETE = To delete something
 
-Hello
 
