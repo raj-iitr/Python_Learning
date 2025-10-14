@@ -38,7 +38,7 @@ outputType = "console"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python FastAPI_tuts/pydantic.py"
+args = "python FastAPI_tuts/pydantic_tutorial.py"
 
 [[ports]]
 localPort = 8000
