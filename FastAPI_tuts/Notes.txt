@@ -151,4 +151,48 @@ POST = To add something
 PUT = To update something
 DELETE = To delete something
 
+Path Params-------------------------------------------------------------------------------------------------------------
 
+Path Parameters are dynamic segment of a url path used to identify a specific resource.
+
+The Path() function :-
+In FastAPI, it is used to provide metadata, validation rules, and documentation hints for path parameters in your API endpoints. 
+Title
+Discription
+Example
+Max_length
+Min_length
+regex
+ge, gt, le, lt etc.
+
+
+HTTPs status code-------------------------------------------------------------------------------------------------------
+
+These are 3-digit code returned by the server (FastAPI) to the client (browser) on requesting, that let the client understand that what has happended to his request.
+
+2XX = Success
+3XX = Redirect (Further action needed)
+4xx = Client Error
+5xx = Server Error
+
+HTTPException---------------------------------------------------------------------------------------------------------
+It is a build-in exception in FastAPI that will return the custom HTTP error response when something goes wrong on your API.
+You can send status code.
+You can send custom message.
+
+Query Parameters------------------------------------------------------------------------------------------------------
+
+Query paramters are optional key-value pairs added at the endpoint of HTTP URL using which you can preform extra operations without disturbing the original end-point.
+
+Rules -
+Query Param starts with '?'
+Multiple queries are separted by '&'
+They are in key-value pair
+
+Query() function of FastAPI is used declare, validate and document query parameter in your API endpoints.
+It allows u to 
+1) Set default value
+2) Validate rules
+3) Add metadata
+
+default, title, description, example, min_length, ge, le, regex etc.
