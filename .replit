@@ -34,13 +34,18 @@ name = "Run Python"
 author = "agent"
 
 [workflows.workflow.metadata]
-outputType = "console"
+outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python FastAPI_tuts/pydantic_tutorial.py"
+args = "cd FastAPI_tuts && uvicorn main:app --host 0.0.0.0 --port 5000 --reload"
+waitForPort = 5000
 
 [[ports]]
 localPort = 8000
 externalPort = 80
 exposeLocalhost = true
+
+[[ports]]
+localPort = 5000
+externalPort = 80
