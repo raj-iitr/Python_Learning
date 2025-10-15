@@ -1,14 +1,4 @@
 {
-    "P001": {
-        "name": "Ananya Sharma",
-        "city": "Guwahati",
-        "age": 28,
-        "gender": "female",
-        "height": 1.65,
-        "weight": 90.0,
-        "bmi": 33.06,
-        "verdict": "Obese"
-    },
     "P002": {
         "name": "Ravi Mehta",
         "city": "Mumbai",
@@ -50,13 +40,13 @@
         "verdict": "Obese"
     },
     "P006": {
-        "name": "Vedant",
-        "age": 23,
-        "city": "Raipur",
+        "name": "Lala",
+        "age": 34,
+        "city": "Mumbai",
         "gender": "Male",
-        "height": 165.0,
-        "weight": 60.0,
-        "bmi": 0.0,
+        "height": 98.0,
+        "weight": 165.0,
+        "bmi": 0.02,
         "verdict": "Underweight"
     }
 }
